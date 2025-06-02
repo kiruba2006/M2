@@ -109,29 +109,29 @@ Write a C program to perform addition and subtraction of two numbers using funct
 
 ## PROGRAM:
 ```
-#include<stdio.h>
-int add(int,int);
-int sub(int,int);
-int main()
-{
-    int a,b,c,d;
-    scanf("%d%d",&a,&b);
-    c = add(a,b);
-    d = sub(a,b);
-    printf("Addition: %d\n",c);
-    printf("Subtraction: %d",d);
+#include <stdio.h>
+
+void add(int a, int b) {
+    int result = a + b;
+    printf("Addition: %d + %d = %d\n", a, b, result);
 }
-int add(int x,int y)
-{
-    int z;
-    z = x + y;
-    return z;
+
+void subtract(int a, int b) {
+    int result = a - b;
+    printf("Subtraction: %d - %d = %d\n", a, b, result);
 }
-int sub(int x,int y)
-{
-    int z;
-    z = x - y;
-    return z;
+
+int main() {
+    int num1, num2;
+    printf("Enter first number: ");
+    scanf("%d", &num1);
+
+    printf("Enter second number: ");
+    scanf("%d", &num2);
+    add(num1, num2);
+    subtract(num1, num2);
+
+    return 0;
 }
 ```
 
@@ -213,16 +213,36 @@ d.	After the loop, print the factorial value.
 
 ## PROGRAM:
 ```
-#include<stdio.h>
-int main()
+#include <stdio.h>
+
+
+int factorial(int n)
 {
-    int n,fact=1;
-    scanf("%d",&n);
-    for(int i=1;i<=n;i++)
-    {
-        fact*=i;
+    int fact = 1;
+    for (int i = 1; i <= n; i++)
+ {
+        fact *= i;
     }
-    printf("Factorial value is: %d",fact);
+    return fact;
+}
+
+int main()
+ {
+    int num;
+
+ 
+    printf("Enter a positive integer: ");
+    scanf("%d", &num);
+
+   
+    if (num < 0) {
+        printf("Factorial is not defined for negative numbers.\n");
+    } else {
+        // Call the factorial function and display result
+        int result = factorial(num);
+        printf("Factorial of %d = %d\n", num, result);
+    }
+
     return 0;
 }
 ```
