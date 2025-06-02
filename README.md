@@ -184,7 +184,8 @@ int main()
 ```
 
 ## OUTPUT:
-![output](image-3.png)
+![WhatsApp Image 2025-06-02 at 10 18 55 AM (1)](https://github.com/user-attachments/assets/3782cc1c-d620-4b9e-b928-8e2735a52c9d)
+
 
 
 
